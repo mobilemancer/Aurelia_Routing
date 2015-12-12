@@ -8,7 +8,7 @@ var webroot = "wwwroot";
 var paths = {
     appSource: './app/**/*.ts',
     appHtml: './app/**/*.html',
-    appDest: "./" + webroot + "/app",
+    appDest: "./" + webroot,
     tsDef: "./typings/"
 };
  
@@ -29,6 +29,10 @@ gulp.task('ts-compile', function () {
         .pipe(gulp.dest(paths.appDest)); 
  });
  
+
+ 
+gulp.task('default', ['ts-compile', 'copy-html']);
+
 gulp.task('watch', ['ts-compile'], function () {
     gulp.watch(paths.appSource, ['ts-compile']);
 });

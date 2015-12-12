@@ -1,9 +1,15 @@
-import { AppRouter } from "aurelia-router";
+import {RouterConfiguration, Router} from 'aurelia-router';
 
 export class App {
-    message: string;
+  router: Router;
 
-    constructor(router: any) {
-        this.message = "Hello from me!";
-    }
-} 
+  configureRouter(config: RouterConfiguration, router: Router) {
+    config.title = "Aurelia";
+    config.map([
+      { route: ["", "home"], name: "home", moduleId: "home/home", nav: true, title: "Welcome" },
+      { route: ["about"], name: "about", moduleId: "home/about", nav: true, title: "About" }
+    ]);
+
+    this.router = router;
+  }
+}

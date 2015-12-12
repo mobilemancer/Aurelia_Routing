@@ -15,7 +15,9 @@
     "dependencies": {
       "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0-beta.1",
       "aurelia-framework": "npm:aurelia-framework@^1.0.0-beta.1.0.3",
-      "core-js": "npm:core-js@^1.2.6"
+      "bootstrap": "npm:bootstrap@3.3.0",
+      "core-js": "npm:core-js@^1.2.6",
+      "font-awesome": "npm:font-awesome@^4.5.0"
     },
     "devDependencies": {}
   }
